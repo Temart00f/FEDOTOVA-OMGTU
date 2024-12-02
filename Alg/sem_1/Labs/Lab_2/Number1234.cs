@@ -1,7 +1,7 @@
 ﻿using System;
-namespace Number_1
+namespace Number_1234
 {
-    class Number_1
+    class Number_1234
     {
         static void Main()
         {
