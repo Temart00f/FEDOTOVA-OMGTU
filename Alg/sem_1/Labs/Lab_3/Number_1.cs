@@ -36,7 +36,7 @@ class Number_1
 
             if (odd == 0)
             {
-                Console.WriteLine("Нечетных цифр в элементе нет!");
+                Console.WriteLine("Нечетных цифр нет");
             }
 
             else
