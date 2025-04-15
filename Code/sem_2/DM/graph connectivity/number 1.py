@@ -6,10 +6,11 @@ matrix = []
 
 for i in range(n):
     data = []
-    string = input('Введите строку матрицы смежности: ')
-    for j in string:
-        data.append(int(j))
-    matrix.append(data)
+    string = input('Введите строку матрицы смежности(через пробел): ')
+    matrix.append(string.split(' '))
+for i in range(n):
+    for j in range(n):
+        matrix[i][j] = int(matrix[i][j])
 
 print('Матрица смежности: ')
 for i in range(n):

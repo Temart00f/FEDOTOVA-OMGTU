@@ -1,13 +1,14 @@
 matrix = []
 
 n = int(input('Введите количество вершин: '))
-data = []
+
 for i in range(n):
-    string = input('Введите строку матрицы: ')
-    for sym in string:
-        data.append(int(sym))
-    matrix.append(data)
     data = []
+    string = input('Введите строку матрицы смежности(через пробел): ')
+    matrix.append(string.split(' '))
+for i in range(n):
+    for j in range(n):
+        matrix[i][j] = int(matrix[i][j])
 
 vertex_values = {0:1}
 max_value = 1
