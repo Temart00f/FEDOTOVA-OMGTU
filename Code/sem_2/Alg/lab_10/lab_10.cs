@@ -96,7 +96,7 @@ class Program
         }
 
         var currently_borrowed = library.Get_currently_borrowed();
-        Console.WriteLine("\nНевозвращеные книги:");
+        Console.WriteLine("\nКниги невозвращеные:");
         foreach (var book in currently_borrowed)
         {
             Console.WriteLine($"{book.Author} - {book.Name}");
