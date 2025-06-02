@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 struct Blank
 {
@@ -89,14 +89,14 @@ class Program
         var library = new Library(new List<Book> { book1, book2, book3, book4 });
 
         var never_borrowed = library.Get_never_borrowed();
-        Console.WriteLine("Никогда не купленные книги:");
+        Console.WriteLine("РќРёРєРѕРіРґР° РЅРµ РєСѓРїР»РµРЅРЅС‹Рµ РєРЅРёРіРё:");
         foreach (var book in never_borrowed)
         {
             Console.WriteLine($"{book.Author} - {book.Name}");
         }
 
         var currently_borrowed = library.Get_currently_borrowed();
-        Console.WriteLine("\nНеврзвращенные книги:");
+        Console.WriteLine("\nРќРµРІСЂР·РІСЂР°С‰РµРЅРЅС‹Рµ РєРЅРёРіРё:");
         foreach (var book in currently_borrowed)
         {
             Console.WriteLine($"{book.Author} - {book.Name}");
