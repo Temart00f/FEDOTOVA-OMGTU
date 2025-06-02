@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 public class Product(int id, string name)
 {
@@ -91,7 +91,7 @@ class Warehouse
 
         while (work)
         {
-            Console.WriteLine("\n1. сгруппировать выдачи по датам\n2. сруппировать по поставщику, отсортировать по дате\n3. список товаров на складе\n4. общая сумма выданных товаров\n5. прибыль склада\n6. выход");
+            Console.WriteLine("\n1. СЃРіСЂСѓРїРїРёСЂРѕРІР°С‚СЊ РІС‹РґР°С‡Рё РїРѕ РґР°С‚Р°Рј\n2. СЃСЂСѓРїРїРёСЂРѕРІР°С‚СЊ РїРѕ РїРѕСЃС‚Р°РІС‰РёРєСѓ, РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ РїРѕ РґР°С‚Рµ\n3. СЃРїРёСЃРѕРє С‚РѕРІР°СЂРѕРІ РЅР° СЃРєР»Р°РґРµ\n4. РѕР±С‰Р°СЏ СЃСѓРјРјР° РІС‹РґР°РЅРЅС‹С… С‚РѕРІР°СЂРѕРІ\n5. РїСЂРёР±С‹Р»СЊ СЃРєР»Р°РґР°\n6. РІС‹С…РѕРґ");
 
             int action = int.Parse(Console.ReadLine());
 
@@ -124,13 +124,13 @@ class Warehouse
             .Where(m => m.IsIncoming)
             .GroupBy(m => m.Date);
 
-        Console.WriteLine("поступления сгруппированные по дате:");
+        Console.WriteLine("РїРѕСЃС‚СѓРїР»РµРЅРёСЏ СЃРіСЂСѓРїРїРёСЂРѕРІР°РЅРЅС‹Рµ РїРѕ РґР°С‚Рµ:");
         foreach (var group in grouped)
         {
-            Console.WriteLine($"дата: {group.Key}");
+            Console.WriteLine($"РґР°С‚Р°: {group.Key}");
             foreach (var m in group)
             {
-                Console.WriteLine($"товар: {m.ProductId}, количество: {m.Quantity}, цена: {m.PricePerUnit}");
+                Console.WriteLine($"С‚РѕРІР°СЂ: {m.ProductId}, РєРѕР»РёС‡РµСЃС‚РІРѕ: {m.Quantity}, С†РµРЅР°: {m.PricePerUnit}");
             }
         }
     }
@@ -141,20 +141,20 @@ class Warehouse
             .Where(m => m.IsIncoming && m.ProviderId != -1)
             .GroupBy(m => m.ProviderId);
 
-        Console.WriteLine("поступления сгруппированные по поставщикам и дате:");
+        Console.WriteLine("РїРѕСЃС‚СѓРїР»РµРЅРёСЏ СЃРіСЂСѓРїРїРёСЂРѕРІР°РЅРЅС‹Рµ РїРѕ РїРѕСЃС‚Р°РІС‰РёРєР°Рј Рё РґР°С‚Рµ:");
         foreach (var group in grouped)
         {
-            Console.WriteLine($"дата: {group.Key}");
+            Console.WriteLine($"РґР°С‚Р°: {group.Key}");
             foreach (var m in group)
             {
-                Console.WriteLine($"поставщик: {m.ProviderId}, товар: {m.ProductId}");
+                Console.WriteLine($"РїРѕСЃС‚Р°РІС‰РёРє: {m.ProviderId}, С‚РѕРІР°СЂ: {m.ProductId}");
             }
         }
     }
 
     public static void GetAllProducts()
     {
-        Console.WriteLine("остатки на складе:");
+        Console.WriteLine("РѕСЃС‚Р°С‚РєРё РЅР° СЃРєР»Р°РґРµ:");
         foreach (var product in Products)
         {
             int incoming = Movements.Where(m => m.ProductId == product.Id && m.IsIncoming).Sum(m => m.Quantity);
@@ -163,7 +163,7 @@ class Warehouse
 
             if (stock > 0)
             {
-                Console.WriteLine($"{product.Name}: {stock} штук");
+                Console.WriteLine($"{product.Name}: {stock} С€С‚СѓРє");
             }
         }
     }
@@ -173,7 +173,7 @@ class Warehouse
         var total = Movements
             .Where(m => !m.IsIncoming)
             .Sum(m => m.Quantity * m.PricePerUnit);
-        Console.WriteLine($"сумма выданного товара = {total}");
+        Console.WriteLine($"СЃСѓРјРјР° РІС‹РґР°РЅРЅРѕРіРѕ С‚РѕРІР°СЂР° = {total}");
     }
 
     public static void GetAllIncome()
@@ -194,6 +194,6 @@ class Warehouse
             profit += totalOutgoingRevenue - totalIncomingCost;
         }
 
-        Console.WriteLine($"прибыль склада = {profit} руб.");
+        Console.WriteLine($"РїСЂРёР±С‹Р»СЊ СЃРєР»Р°РґР° = {profit} СЂСѓР±.");
     }
 }

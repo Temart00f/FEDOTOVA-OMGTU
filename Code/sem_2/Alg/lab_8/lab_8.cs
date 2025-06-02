@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 delegate double Operation(double x, double y);
 
@@ -29,7 +29,7 @@ class Program
             input = Console.ReadLine();
         }
 
-        sorted = strings.Where(x => x.StartsWith('�')).ToList();
+        sorted = strings.Where(x => x.StartsWith('а')).ToList();
 
         for (int i = 0; i < sorted.Count; i++)
         {

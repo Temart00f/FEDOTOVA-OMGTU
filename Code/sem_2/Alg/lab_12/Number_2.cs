@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Xml.Schema;
 
 class Client
@@ -75,12 +75,12 @@ class Program
 
         foreach (var group in byDate)
         {
-            Console.WriteLine($"\nДата: {group.Key.ToShortDateString()}");
+            Console.WriteLine($"\nР”Р°С‚Р°: {group.Key.ToShortDateString()}");
             foreach (var visit in group)
             {
                 var client = clients.First(c => c.Id == visit.ClientId);
                 var trainer = trainers.First(t => t.Id == visit.TrainerId);
-                Console.WriteLine($"  Клиент: {client.Name}, Тренер: {trainer.Name}, Время: {visit.DurationMinutes} мин");
+                Console.WriteLine($"  РљР»РёРµРЅС‚: {client.Name}, РўСЂРµРЅРµСЂ: {trainer.Name}, Р’СЂРµРјСЏ: {visit.DurationMinutes} РјРёРЅ");
             }
         }
 
@@ -89,11 +89,11 @@ class Program
         foreach (var group in byTrainer)
         {
             var trainer = trainers.First(t => t.Id == group.Key);
-            Console.WriteLine($"\nТренер: {trainer.Name}");
+            Console.WriteLine($"\nРўСЂРµРЅРµСЂ: {trainer.Name}");
             foreach (var visit in group)
             {
                 var client = clients.First(c => c.Id == visit.ClientId);
-                Console.WriteLine($"  Клиент: {client.Name}, Дата: {visit.VisitDate.ToShortDateString()}, Время: {visit.DurationMinutes} мин");
+                Console.WriteLine($"  РљР»РёРµРЅС‚: {client.Name}, Р”Р°С‚Р°: {visit.VisitDate.ToShortDateString()}, Р’СЂРµРјСЏ: {visit.DurationMinutes} РјРёРЅ");
             }
         }
 
@@ -105,21 +105,21 @@ class Program
         if (maxClient != null)
         {
             var client = clients.First(c => c.Id == maxClient.ClientId);
-            Console.WriteLine($"Клиент с наибольшим временем: {client.Name}, всего {maxClient.TotalMinutes} минут");
+            Console.WriteLine($"РљР»РёРµРЅС‚ СЃ РЅР°РёР±РѕР»СЊС€РёРј РІСЂРµРјРµРЅРµРј: {client.Name}, РІСЃРµРіРѕ {maxClient.TotalMinutes} РјРёРЅСѓС‚");
         }
         else
         {
-            Console.WriteLine("Нет данных о посещениях.");
+            Console.WriteLine("РќРµС‚ РґР°РЅРЅС‹С… Рѕ РїРѕСЃРµС‰РµРЅРёСЏС….");
         }
 
         foreach (var client in clients)
         {
-            Console.WriteLine($"\nКлиент: {client.Name}");
+            Console.WriteLine($"\nРљР»РёРµРЅС‚: {client.Name}");
             var clientVisits = visits.Where(v => v.ClientId == client.Id);
 
             foreach (var visit in clientVisits)
             {
-                Console.WriteLine($"  Дата посещения: {visit.VisitDate.ToShortDateString()} ({visit.DurationMinutes} мин)");
+                Console.WriteLine($"  Р”Р°С‚Р° РїРѕСЃРµС‰РµРЅРёСЏ: {visit.VisitDate.ToShortDateString()} ({visit.DurationMinutes} РјРёРЅ)");
             }
         }
     }

@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 class Number_2
 {
@@ -47,7 +47,7 @@ class Program
         Second += () => two.Sum_two(two.Multiply_two());
         Second += () => two.Divide(two.Sum_two(two.Multiply_two()));
 
-        Console.WriteLine($"Первый делегат: {First.Invoke()}");
-        Console.WriteLine($"Второй делегат: {Second.Invoke()}");
+        Console.WriteLine($"РџРµСЂРІС‹Р№ РґРµР»РµРіР°С‚: {First.Invoke()}");
+        Console.WriteLine($"Р’С‚РѕСЂРѕР№ РґРµР»РµРіР°С‚: {Second.Invoke()}");
     }
 }

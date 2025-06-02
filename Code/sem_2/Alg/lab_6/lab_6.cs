@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 class Car
 {
@@ -25,12 +25,12 @@ class CarWash
     {
         if (car.Wash == true)
         {
-            Console.WriteLine($"Машина {car.Name} уже помыта");
+            Console.WriteLine($"РњР°С€РёРЅР° {car.Name} СѓР¶Рµ РїРѕРјС‹С‚Р°");
             return;
         }
 
         car.Wash = true;
-        Console.WriteLine($"Машина {car.Name} была помыта");
+        Console.WriteLine($"РњР°С€РёРЅР° {car.Name} Р±С‹Р»Р° РїРѕРјС‹С‚Р°");
     }
 }
 
@@ -44,21 +44,21 @@ class Program
         Garage garage = new Garage();
         garage.Cars = new List<Car>();
 
-        Console.Write("Введите количество машин: ");
+        Console.Write("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РјР°С€РёРЅ: ");
         int count = Convert.ToInt32(Console.ReadLine());
 
         for (int i = 0; i < count; i++)
         {
-            Console.Write("Введите год выпуска: ");
+            Console.Write("Р’РІРµРґРёС‚Рµ РіРѕРґ РІС‹РїСѓСЃРєР°: ");
             int year = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите название: ");
+            Console.Write("Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ: ");
             string name = Console.ReadLine();
-            Console.Write("Машина помыта? (1/0 - да/нет): ");
+            Console.Write("РњР°С€РёРЅР° РїРѕРјС‹С‚Р°? (1/0 - РґР°/РЅРµС‚): ");
             int wash = Convert.ToInt32(Console.ReadLine());
 
             Car car = new Car(year, name, Convert.ToBoolean(wash));
             garage.Cars.Add(car);
-            Console.WriteLine($"Машина {i + 1} добавлена!");
+            Console.WriteLine($"РњР°С€РёРЅР° {i + 1} РґРѕР±Р°РІР»РµРЅР°!");
         }
 
         for (int i = 0; i < garage.Cars.Count; i++)

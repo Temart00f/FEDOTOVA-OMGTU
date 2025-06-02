@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 public class Phone
 {
@@ -47,6 +47,6 @@ class Program
             }
         }
 
-        Console.WriteLine($"результат: {prov}  количество: {data}");
+        Console.WriteLine($"СЂРµР·СѓР»СЊС‚Р°С‚: {prov}  РєРѕР»РёС‡РµСЃС‚РІРѕ: {data}");
     }
 }

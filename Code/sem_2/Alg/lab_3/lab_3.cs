@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -29,7 +29,7 @@ class Program
                 if (stack.Count > 0)
                     previous = stack.Peek();
 
-                else { Console.WriteLine("Последовательность неправильная"); return; }
+                else { Console.WriteLine("РџРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РЅРµРїСЂР°РІРёР»СЊРЅР°СЏ"); return; }
 
                 switch (ch)
                 {
@@ -49,7 +49,7 @@ class Program
                         break;
 
                     default:
-                        Console.WriteLine("Последовательность неправильная");
+                        Console.WriteLine("РџРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РЅРµРїСЂР°РІРёР»СЊРЅР°СЏ");
                         return;
                         break;
                 }
@@ -57,9 +57,9 @@ class Program
         }
 
         if (stack.Count == 0)
-            Console.WriteLine("Последовательность правильная");
+            Console.WriteLine("РџРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РїСЂР°РІРёР»СЊРЅР°СЏ");
 
         else
-            Console.WriteLine("Последовательность неправильная");
+            Console.WriteLine("РџРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РЅРµРїСЂР°РІРёР»СЊРЅР°СЏ");
     }
 }

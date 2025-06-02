@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 class Phone
 {
@@ -34,7 +34,7 @@ class Program
 
         while (work)
         {
-            Console.WriteLine("\n0 - группировка по году\n1 - группировка по оператору\n2 - выдать телефон по имени\n3 - выход");
+            Console.WriteLine("\n0 - РіСЂСѓРїРїРёСЂРѕРІРєР° РїРѕ РіРѕРґСѓ\n1 - РіСЂСѓРїРїРёСЂРѕРІРєР° РїРѕ РѕРїРµСЂР°С‚РѕСЂСѓ\n2 - РІС‹РґР°С‚СЊ С‚РµР»РµС„РѕРЅ РїРѕ РёРјРµРЅРё\n3 - РІС‹С…РѕРґ");
             int value = int.Parse(Console.ReadLine());
 
             switch (value)
@@ -61,10 +61,10 @@ class Program
 
         foreach (var group in sorted)
         {
-            Console.WriteLine($"год: {group.Key}");
+            Console.WriteLine($"РіРѕРґ: {group.Key}");
             foreach (var phone in group)
             {
-                Console.WriteLine($"  номер: {phone.Phone_number}, имя: {phone.Name}, оператор: {phone.Provider}");
+                Console.WriteLine($"  РЅРѕРјРµСЂ: {phone.Phone_number}, РёРјСЏ: {phone.Name}, РѕРїРµСЂР°С‚РѕСЂ: {phone.Provider}");
             }
         }
     }
@@ -75,30 +75,30 @@ class Program
 
         foreach (var group in sorted)
         {
-            Console.WriteLine($"оператор: {group.Key}");
+            Console.WriteLine($"РѕРїРµСЂР°С‚РѕСЂ: {group.Key}");
             foreach (var phone in group)
             {
-                Console.WriteLine($"  номер: {phone.Phone_number}, имя: {phone.Name}, год подключения: {phone.Year}");
+                Console.WriteLine($"  РЅРѕРјРµСЂ: {phone.Phone_number}, РёРјСЏ: {phone.Name}, РіРѕРґ РїРѕРґРєР»СЋС‡РµРЅРёСЏ: {phone.Year}");
             }
         }
     }
 
     private static void Find_by_name(List<Phone> phones)
     {
-        Console.Write("Введите имя: ");
+        Console.Write("Р’РІРµРґРёС‚Рµ РёРјСЏ: ");
         string searc_name = Console.ReadLine();
 
         var found = phones.Where(x => x.Name == search_name).ToList();
 
         if (found.Count == 0)
         {
-            Console.WriteLine("Не найдено");
+            Console.WriteLine("РќРµ РЅР°Р№РґРµРЅРѕ");
             return;
         }
 
         foreach (Phone phone in found)
         {
-            Console.WriteLine($"  номер: {phone.Phone_number}, имя: {phone.Name}, год подключения: {phone.Year}, оператор: {phone.Provider}");
+            Console.WriteLine($"  РЅРѕРјРµСЂ: {phone.Phone_number}, РёРјСЏ: {phone.Name}, РіРѕРґ РїРѕРґРєР»СЋС‡РµРЅРёСЏ: {phone.Year}, РѕРїРµСЂР°С‚РѕСЂ: {phone.Provider}");
         }
     }
 }

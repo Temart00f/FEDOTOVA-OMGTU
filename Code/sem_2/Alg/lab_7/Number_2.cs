@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 class Cockroach
 {
@@ -29,7 +29,7 @@ class Finish_event_demo
 {
     public static void Handler(string name)
     {
-        Console.WriteLine($"{name} победил!\n");
+        Console.WriteLine($"{name} РїРѕР±РµРґРёР»!\n");
         Environment.Exit(0);
     }
 }
@@ -45,9 +45,9 @@ class Program
         double finish = 100;
 
         List<Cockroach> racers = new List<Cockroach>();
-        racers.Add(new Cockroach("Таракан Гоша", 0));
-        racers.Add(new Cockroach("Таракан Андрюха", 0));
-        racers.Add(new Cockroach("Таракан Анатолий", 0));
+        racers.Add(new Cockroach("РўР°СЂР°РєР°РЅ Р“РѕС€Р°", 0));
+        racers.Add(new Cockroach("РўР°СЂР°РєР°РЅ РђРЅРґСЂСЋС…Р°", 0));
+        racers.Add(new Cockroach("РўР°СЂР°РєР°РЅ РђРЅР°С‚РѕР»РёР№", 0));
 
         for (; ; )
         {

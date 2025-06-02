@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Diagnostics.Tracing;
 
 class Point
@@ -30,7 +30,7 @@ class Run_out_event_demo
 {
     public static void Handler()
     {
-        Console.WriteLine("Точка вышла за пределы поля!\n");
+        Console.WriteLine("РўРѕС‡РєР° РІС‹С€Р»Р° Р·Р° РїСЂРµРґРµР»С‹ РїРѕР»СЏ!\n");
         Environment.Exit(0);
     }
 }

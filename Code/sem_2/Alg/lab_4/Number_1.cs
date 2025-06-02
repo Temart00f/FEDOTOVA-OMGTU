@@ -1,10 +1,10 @@
-using System;
+п»їusing System;
 
 class Number_1
 {
     static void Error()
     {
-        Console.WriteLine("Ошибка");
+        Console.WriteLine("РћС€РёР±РєР°");
         Environment.Exit(1);
     }
     static void Main()
@@ -89,7 +89,7 @@ class Number_1
 
         if (stack.Count > 1 || stack.Count == 0)
         {
-            Console.WriteLine("Неверный формат");
+            Console.WriteLine("РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚");
             return;
         }
 
